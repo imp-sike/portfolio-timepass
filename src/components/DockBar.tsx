@@ -1,4 +1,4 @@
-import { SetStateAction, useEffect, useState } from "react";
+import {useEffect, useState } from "react";
 import DraggableContainer from "./DraggableContainer";
 import GithubWindow from "./GithubWindow";
 
