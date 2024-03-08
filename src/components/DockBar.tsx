@@ -65,18 +65,103 @@ export default function DockBar() {
                             return (
                                 <button onClick={() => {
                                     var r = Math.random();
-                                    if(item.title === "Github" ){
+                                    if (item.title === "Github") {
                                         console.log(r);
                                         setListOfOpenWindows([...listOfOpenWindows, {
                                             id: r,
-                                            element: <GithubWindow key={r} sharedState={listOfOpenWindows} setSharedState={setListOfOpenWindows} id={r}/>
+                                            element: <GithubWindow key={r} sharedState={listOfOpenWindows} setSharedState={setListOfOpenWindows} id={r} />
                                         }]);
-                                    } else if(item.title === "Resume" ){
+                                    } else if (item.title === "Resume") {
                                         setListOfOpenWindows([...listOfOpenWindows, {
                                             id: r,
                                             element: <DraggableContainer title={"Sulav Parajuli Resume"} sharedState={listOfOpenWindows} setSharedState={setListOfOpenWindows} id={r}>
                                                 <iframe className="h-full w-full" src="https://dagrs.berkeley.edu/sites/default/files/2020-01/sample.pdf"></iframe>
-                                            </DraggableContainer> 
+                                            </DraggableContainer>
+                                        }]);
+                                    }
+                                    else if (item.title === "Terminal") {
+                                        setListOfOpenWindows([...listOfOpenWindows, {
+                                            id: r,
+                                            element: <DraggableContainer title={"Sulav Parajuli Resume"} sharedState={listOfOpenWindows} setSharedState={setListOfOpenWindows} id={r}>
+                                                <iframe className="h-full w-full" src="https://dagrs.berkeley.edu/sites/default/files/2020-01/sample.pdf"></iframe>
+                                            </DraggableContainer>
+                                        }]);
+                                    } else if (item.title === "Projects") {
+                                        setListOfOpenWindows([...listOfOpenWindows, {
+                                            id: r,
+                                            element: <DraggableContainer title={"Sulav Parajuli - Projects"} sharedState={listOfOpenWindows} setSharedState={setListOfOpenWindows} id={r}>
+                                                <iframe  className="w-full h-full" sandbox='allow-scripts' srcDoc="
+                                                  <script src='https://cdn.tailwindcss.com'></script>
+                                                  <div class='p-4'>
+
+                                                  <div class='bg-blue-200 p-4 rounded-md mb-4'>
+                                                      <h3 class='text-xl font-semibold mb-2'>Milkman App</h3>
+                                                      <p class='text-gray-700'>
+                                                          I utilized the Flutter framework along with Hive for efficient local
+                                                          database management. The app seamlessly integrates a user-friendly interface
+                                                          for milkmen to track and record sales transactions.
+                                                          Leveraging the capabilities of a Point of Sale (POS) printer,
+                                                          the app enables real-time billing, providing a streamlined and
+                                                          professional invoicing system. Through intuitive features,
+                                                          the milkman can easily manage customer records, track sales,
+                                                          and generate instant receipts, enhancing overall operational efficiency. The combination of Flutter's
+                                                          cross-platform capabilities and Hive's local database functionality
+                                                          ensures a robust and responsive solution for the milkman's sales
+                                                          and billing needs.
+                                                      </p>
+                                                      <div class='mt-3 flex items-center'>
+                                                          <span class='text-gray-600 font-bold'>Language: Dart</span>
+                                                          <span class='ml-4 text-gray-600  font-bold'>Framework: Flutter</span>
+                                                      </div>
+                                                  </div>
+
+
+                                                  <div class='bg-blue-200 p-4 rounded-md mb-4'>
+                                                  <h3 class='text-xl font-semibold mb-2'>Milkman App</h3>
+                                                  <p class='text-gray-700'>
+                                                      I utilized the Flutter framework along with Hive for efficient local
+                                                      database management. The app seamlessly integrates a user-friendly interface
+                                                      for milkmen to track and record sales transactions.
+                                                      Leveraging the capabilities of a Point of Sale (POS) printer,
+                                                      the app enables real-time billing, providing a streamlined and
+                                                      professional invoicing system. Through intuitive features,
+                                                      the milkman can easily manage customer records, track sales,
+                                                      and generate instant receipts, enhancing overall operational efficiency. The combination of Flutter's
+                                                      cross-platform capabilities and Hive's local database functionality
+                                                      ensures a robust and responsive solution for the milkman's sales
+                                                      and billing needs.
+                                                  </p>
+                                                  <div class='mt-3 flex items-center'>
+                                                      <span class='text-gray-600 font-bold'>Language: Dart</span>
+                                                      <span class='ml-4 text-gray-600  font-bold'>Framework: Flutter</span>
+                                                  </div>
+                                              </div>
+
+                                              <div class='bg-blue-200 p-4 rounded-md mb-4'>
+                                              <h3 class='text-xl font-semibold mb-2'>Milkman App</h3>
+                                              <p class='text-gray-700'>
+                                                  I utilized the Flutter framework along with Hive for efficient local
+                                                  database management. The app seamlessly integrates a user-friendly interface
+                                                  for milkmen to track and record sales transactions.
+                                                  Leveraging the capabilities of a Point of Sale (POS) printer,
+                                                  the app enables real-time billing, providing a streamlined and
+                                                  professional invoicing system. Through intuitive features,
+                                                  the milkman can easily manage customer records, track sales,
+                                                  and generate instant receipts, enhancing overall operational efficiency. The combination of Flutter's
+                                                  cross-platform capabilities and Hive's local database functionality
+                                                  ensures a robust and responsive solution for the milkman's sales
+                                                  and billing needs.
+                                              </p>
+                                              <div class='mt-3 flex items-center'>
+                                                  <span class='text-gray-600 font-bold'>Language: Dart</span>
+                                                  <span class='ml-4 text-gray-600  font-bold'>Framework: Flutter</span>
+                                              </div>
+                                          </div>
+                                              
+                                              
+                                              </div>
+                                                "></iframe>
+                                            </DraggableContainer>
                                         }]);
                                     }
                                 }}>
