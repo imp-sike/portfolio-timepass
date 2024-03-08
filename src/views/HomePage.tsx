@@ -1,5 +1,6 @@
 import DockBar from "../components/DockBar";
 import HeaderBar from "../components/HeaderBar";
+import DraggableContainer from "../components/DraggableContainer"
 
 export default function HomePage() {
     return (
