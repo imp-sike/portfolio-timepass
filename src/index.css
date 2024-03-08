@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home-bg {
+    background-image: url(https://wallpaperaccess.com/full/568191.png);
+}
