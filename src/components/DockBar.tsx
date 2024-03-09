@@ -1,6 +1,7 @@
 import {useEffect, useState } from "react";
 import DraggableContainer from "./DraggableContainer";
 import GithubWindow from "./GithubWindow";
+import Terminal from "./Terminal";
 
 interface DockItem {
     id: number;
@@ -82,8 +83,8 @@ export default function DockBar() {
                                     else if (item.title === "Terminal") {
                                         setListOfOpenWindows([...listOfOpenWindows, {
                                             id: r,
-                                            element: <DraggableContainer title={"Sulav Parajuli Resume"} sharedState={listOfOpenWindows} setSharedState={setListOfOpenWindows} id={r}>
-                                                <iframe className="h-full w-full" src="https://dagrs.berkeley.edu/sites/default/files/2020-01/sample.pdf"></iframe>
+                                            element: <DraggableContainer title={"Terminal"} sharedState={listOfOpenWindows} setSharedState={setListOfOpenWindows} id={r}>
+                                                <Terminal/>
                                             </DraggableContainer>
                                         }]);
                                     } else if (item.title === "Projects") {

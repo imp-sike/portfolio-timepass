@@ -64,7 +64,7 @@ export default function DraggableContainer({ children, title, sharedState, setSh
         </div>
 
       </div>
-      <div className="content h-full p-1 bg-gray-200 border border-gray-300">
+      <div className="content h-full bg-gray-200  border-gray-300">
         {children}
       </div>
     </div>
